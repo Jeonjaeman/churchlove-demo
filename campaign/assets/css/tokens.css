@@ -1,0 +1,58 @@
+/* 교회사랑넷 base 테마 토큰 — D:\WORK\CORE\CHURCH-LOVE\DESIGN-SYSTEM.md §10 (원본 디자인 유지)
+   engine/assets/css/tokens.css 를 같은 이름으로 대신한다(겹쳐 복사). 브랜드 4종은 site.json tokens → brand.css.
+   대비(WCAG, 2026-11-19 계산):
+     #2eab6f 위 흰 2.93 ✗ → 주색 바탕 글자는 #111(6.45)  ·  흰 글자는 #1c8458(4.68) 이상 진한 바탕에서만
+     #19976c 위 흰 3.69 → 큰 글자(24px↑ 또는 18.66px↑ 굵게)만  ·  #1c8458 글자는 흰 바탕만(파스텔 위 3.55~4.28 ✗)
+     파스텔(#f5f5f3·#e7dfd9·#eaeff9) 위 작은 녹색 글자 = --c-ink #146b47(4.95~5.97)
+     민트 #0ca585 위 흰 3.12 ✗ → #111(6.06)  ·  다크 틸 #165051 위 흰 9.13  ·  형광 #f4fa58 위 #111(16.78) */
+:root {
+  --c-primary: #2eab6f;
+  --c-primary-text: #1c8458;
+  --c-on-primary: #111;
+  --c-primary-large: #19976c;
+  --c-ink: #146b47;
+
+  --c-text: #111;
+  --c-text-body: #333;
+  --c-text-sub: #5b5b5b;       /* 원본 #666·#7b7b7b·#999 대신 — 베이지 위 5.16 */
+  --c-line: #e9e9e9;
+  --c-bg: #fff;
+  --c-bg-soft: #f8f8f8;
+
+  --c-bg-warm: #f5f5f3;        /* 히어로 웜 그레이 */
+  --c-bg-beige: #e7dfd9;       /* section03_1 웜 베이지 */
+  --c-bg-blue: #eaeff9;        /* section04·08 라이트 블루그레이 */
+  --c-bg-mint: #0ca585;  --c-on-mint: #111;                         /* section06 민트 솔리드 */
+  --c-bg-deep: #165051;  --c-on-deep: #fff;  --c-on-deep-sub: #c9e6d8;  /* section10 다크 틸 */
+  --c-bg-dark: #252525;  --c-on-dark: #fff;  --c-on-dark-sub: #c8c8c8;  /* section12 차콜 */
+  --c-accent: #f4fa58;   --c-on-accent: #111;                       /* 헤더 "구축신청하기" 형광 옐로 */
+  --c-orange: #ff8a00;   --c-on-orange: #111;                       /* 원형 CTA — 흰 글자 2.36 ✗ */
+  --c-danger: #e50000;
+
+  --c-footer: #252525;
+  --c-footer-text: #c8c8c8;
+
+  --font-body: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  --fs-12: .75rem; --fs-13: .8125rem; --fs-14: .875rem; --fs-16: 1rem; --fs-18: 1.125rem; --fs-20: 1.25rem; --fs-22: 1.375rem;
+  --fs-sub: clamp(16px, 2.5vw, 22px);
+  --fs-h3: clamp(20px, 3vw, 30px);
+  --fs-h2: clamp(24px, 4vw, 40px);
+  --fs-display: clamp(32px, 5vw, 50px);
+  --fw-title: 800; --fw-strong: 700; --fw-ui: 600;
+  --ls-title: -2px; --ls-sub: -.8px; --ls-body: -.5px;
+  --lh-title: 1.25; --lh: 1.6;
+
+  --w-max: 1400px;
+  --w-narrow: 960px;
+  --gutter: clamp(16px, 3vw, 32px);
+  --header-h: 99px;
+  --header-h-m: 60px;
+  --space-section: clamp(60px, 9vw, 140px);
+  --gap-sm: 10px; --gap-md: 20px; --gap-lg: 40px;
+
+  --radius-sm: 5px; --radius: 10px; --radius-lg: 20px; --radius-pill: 90px;
+  --radius-label: 0 0 30px 30px;
+  --shadow: 0 0 20px rgba(0, 0, 0, .1);
+  --shadow-float: 0 7px 15px 1px rgba(0, 0, 0, .1);
+  --dur-fast: .2s; --dur-base: .3s;
+}

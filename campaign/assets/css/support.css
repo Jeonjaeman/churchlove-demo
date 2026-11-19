@@ -1,0 +1,68 @@
+/* 교회사랑넷 B3 섹션 CSS — 유지보수·회사소개·고객센터·가이드·FAQ·약관.
+   색은 tokens.css 변수만. 흰 글자는 --c-primary-text 이상 진한 바탕에서만, 파스텔 위 작은 녹색 글자는 --c-ink. */
+
+/* 회사 정보·연락처 표 (dl) */
+.info-list { display: grid; gap: 0; margin: 0; border-top: 2px solid var(--c-text); }
+.info-list > div { display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 16px; padding: 14px 4px; border-bottom: 1px solid var(--c-line); }
+.info-list dt { font-weight: var(--fw-strong); color: var(--c-text); }
+.info-list dd { margin: 0; color: var(--c-text-body); overflow-wrap: anywhere; }
+@media (max-width: 600px) { .info-list > div { grid-template-columns: 1fr; gap: 4px; } }
+
+/* 연혁 */
+.history-list { list-style: none; margin: 0; padding: 0; border-left: 3px solid var(--c-primary); }
+.history-list > li { position: relative; padding: 0 0 28px 28px; }
+.history-list > li::before { content: ""; position: absolute; left: -9px; top: 6px; width: 15px; height: 15px; border-radius: 50%; background: var(--c-bg); border: 3px solid var(--c-primary-text); }
+.history-list > li:last-child { padding-bottom: 0; }
+.history-year { display: block; font-size: var(--fs-22); font-weight: var(--fw-title); color: var(--c-text); line-height: 1.2; }
+.history-list ul { margin: 6px 0 0; padding-left: 1.1em; color: var(--c-text-body); }
+.history-list ul li + li { margin-top: 4px; }
+
+/* 인증서 원본 */
+.cert-grid { list-style: none; margin: 24px 0 0; padding: 0; display: grid; gap: 20px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.cert-grid figure { margin: 0; padding: 20px; text-align: center; background: var(--c-bg); border: 1px solid var(--c-line); border-radius: var(--radius); }
+.cert-grid img { width: auto; max-width: 100%; height: auto; max-height: 260px; margin: 0 auto; }
+.cert-grid figcaption { margin-top: 12px; font-size: var(--fs-14); color: var(--c-text-sub); }
+@media (max-width: 760px) { .cert-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 420px) { .cert-grid { grid-template-columns: 1fr; } }
+
+/* 서버 구성 (그림 대신 HTML) */
+.server-diagram { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; grid-template-columns: repeat(4, minmax(0, 1fr)); counter-reset: srv; }
+.server-diagram li { counter-increment: srv; position: relative; padding: 20px 18px; border-radius: var(--radius); background: var(--c-bg); border: 2px solid var(--c-primary); }
+.server-diagram li::before { content: counter(srv, decimal-leading-zero); display: block; font-weight: var(--fw-title); color: var(--c-ink); margin-bottom: 4px; }
+.server-diagram strong { display: block; color: var(--c-text); margin-bottom: 6px; }
+.server-diagram span { display: block; font-size: var(--fs-14); color: var(--c-text-body); }
+@media (max-width: 1000px) { .server-diagram { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 520px) { .server-diagram { grid-template-columns: 1fr; } }
+
+/* 입금 계좌 카드 */
+.account-card { padding: 28px; border-radius: var(--radius-lg); background: var(--c-bg); border: 2px solid var(--c-primary); }
+.account-card__bank { margin: 0; font-weight: var(--fw-strong); color: var(--c-ink); }
+.account-card__number { margin: 6px 0; font-size: var(--fs-h3); font-weight: var(--fw-title); letter-spacing: 0; color: var(--c-text); }
+.account-card__owner { margin: 0; color: var(--c-text-body); }
+
+/* 원격지원 버튼 묶음 */
+.remote-actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 20px 0 0; padding: 0; list-style: none; }
+
+/* 신청 안내 상자 */
+.cta-box { margin-top: 24px; padding: 24px; border-radius: var(--radius-lg); background: var(--c-bg); border: 1px solid var(--c-line); }
+.cta-box p { margin: 0 0 14px; }
+
+/* FAQ 모음 */
+.faq-group + .faq-group { margin-top: 48px; }
+.faq-group h2 { font-size: var(--fs-h3); margin-bottom: 8px; }
+.faq-answer a { color: var(--c-primary-text); }
+
+/* 약관·방침 문서 */
+.doc { color: var(--c-text-body); }
+.doc h2 { font-size: var(--fs-20); margin: 2em 0 .6em; padding-top: 12px; border-top: 1px solid var(--c-line); color: var(--c-text); }
+.doc p { margin: 0 0 1em; }
+.doc-toc { margin: 24px 0 0; padding: 20px 24px; border-radius: var(--radius); background: var(--c-bg-warm); }
+.doc-toc h2 { margin: 0 0 10px; padding: 0; border: 0; font-size: var(--fs-18); }
+.doc-toc ol { margin: 0; padding-left: 0; list-style: none; display: grid; gap: 6px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.doc-toc a { color: var(--c-ink); }
+@media (max-width: 760px) { .doc-toc ol { grid-template-columns: 1fr; } }
+.doc-date { color: var(--c-text-sub); font-size: var(--fs-14); }
+
+/* 게시판 스냅샷 보조 칸(교회명) */
+.board-list .board-meta { color: var(--c-text-sub); font-size: var(--fs-14); white-space: nowrap; }
+.board-list li > span:first-child { min-width: 0; overflow-wrap: anywhere; }

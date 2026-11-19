@@ -1,0 +1,43 @@
+/* B1 섹션 CSS — 홈페이지 제작·요금·포트폴리오·신청·블로그·플레이스. 색은 토큰 변수만. */
+
+.hp-gap { margin-top: 20px; }
+
+/* 하이브리드 비교: 가운데 카드 강조 */
+.hp-compare .card--focus { border: 2px solid var(--c-primary-text); }
+.hp-compare h3 { font-size: var(--fs-18); margin-bottom: .4em; }
+.hp-compare ul { margin: 0; padding-left: 1.1em; color: var(--c-text-body); }
+.hp-compare li + li { margin-top: 4px; }
+
+/* AI 하이브리드 메뉴 예시 */
+.hp-menu { display: grid; gap: 16px; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 0; }
+.hp-menu > div { padding: 18px 20px; border-radius: var(--radius-lg); background: var(--c-bg); border: 1px solid var(--c-line); }
+.hp-menu dt { font-weight: var(--fw-title); margin-bottom: 6px; }
+.hp-menu dd { margin: 0; color: var(--c-text-sub); font-size: var(--fs-14); line-height: 1.7; }
+.hp-menu b { color: var(--c-ink); font-weight: var(--fw-title); }
+
+/* 진행 순서: 단계 카드 안의 할 일·확인할 점 */
+.hp-step-list li { padding-right: 24px; }
+.hp-sub-title { margin: 12px 0 4px; font-size: var(--fs-14); font-weight: var(--fw-title); color: var(--c-ink); }
+.hp-sub { margin: 0; padding-left: 1.1em; color: var(--c-text-sub); font-size: var(--fs-14); }
+.hp-sub li + li { margin-top: 2px; }
+
+/* 포트폴리오 이름 목록 */
+.pf-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.pf-list li { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 12px 16px; border-radius: var(--radius); background: var(--c-bg); border: 1px solid var(--c-line); }
+.pf-list a { font-weight: var(--fw-title); color: var(--c-text); overflow-wrap: anywhere; }
+.pf-list time { flex: none; font-size: var(--fs-13); color: var(--c-text-sub); }
+/* 기관 사례: 이름 + "제작 방식 · 연월" 이 길어 줄바꿈 허용, 포트폴리오 유형 표시 */
+.pf-list--meta li { flex-wrap: wrap; }
+.pf-tag { display: inline-block; margin-right: auto; padding: 0 8px; border: 1px solid var(--c-line); border-radius: 999px; font-size: var(--fs-13); font-weight: 400; color: var(--c-ink); white-space: nowrap; }
+
+/* 블로그·플레이스 서비스 카드 가격 줄 */
+.hp-price { margin: 12px 0 0; font-weight: var(--fw-title); color: var(--c-text); }
+.hp-price s { color: var(--c-text-sub); font-weight: 400; margin-right: 4px; }
+
+@media (max-width: 1024px) {
+  .hp-menu { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pf-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  .hp-menu, .pf-list { grid-template-columns: 1fr; }
+}

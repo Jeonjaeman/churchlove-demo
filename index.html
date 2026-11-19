@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>교회사랑넷 GEO 리뉴얼 데모 (내부 검토용)</title>
+<meta name="description" content="교회사랑넷 GEO 리뉴얼 데모 목록 — 같은 원고·같은 SEO/GEO 마크업 위에 시각 연출만 바꾼 데모. 내부 검토용, 검색 색인 제외.">
+<link rel="icon" href="base/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+  /* 교회사랑넷 토큰: primary #2eab6f(글자 #111) · 글자용 #1c8458 · 다크 틸 #165051(흰 글자) · 파스텔 위 녹색 글자 #146b47 */
+  :root { --primary: #2eab6f; --primary-text: #1c8458; --on-primary: #111; --deep: #165051; --on-deep: #fff;
+          --on-deep-sub: #c9e6d8; --ink: #146b47; --bg: #f5f5f3; --text: #111; --text-body: #333; --text-sub: #5b5b5b; --line: #e2e2de; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: "Pretendard Variable", Pretendard, -apple-system, "Malgun Gothic", sans-serif; background: var(--bg);
+          color: var(--text); line-height: 1.6; word-break: keep-all; overflow-wrap: break-word; }
+  .nobr { white-space: nowrap; }
+  .hero { background: var(--deep); color: var(--on-deep); padding: clamp(48px, 8vw, 88px) 16px clamp(40px, 6vw, 64px); text-align: center; }
+  .hero h1 { margin: 0 0 12px; font-size: clamp(1.75rem, 4.5vw, 2.75rem); line-height: 1.25; letter-spacing: -.02em; }
+  .hero h1 span { color: #8fe0b5; }
+  .hero p { margin: 0 auto; max-width: 720px; color: var(--on-deep-sub); }
+  .badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin: 20px 0 0; padding: 0; list-style: none; }
+  .badges li { padding: 4px 12px; border-radius: 999px; background: var(--primary); color: var(--on-primary); font-size: .8125rem; font-weight: 700; }
+  main { max-width: 1240px; margin: 0 auto; padding: clamp(32px, 5vw, 56px) 16px 56px; }
+  .cards { list-style: none; margin: 0; padding: 0; display: grid; gap: 24px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); }
+  .card { display: flex; flex-direction: column; height: 100%; background: #fff; border: 1px solid var(--line); border-radius: 16px;
+           overflow: hidden; color: inherit; text-decoration: none; transition: transform .2s, border-color .2s, box-shadow .2s; }
+  a.card:hover, a.card:focus-visible { transform: translateY(-4px); border-color: var(--primary); box-shadow: 0 10px 24px rgba(0, 0, 0, .08); }
+  a.card:focus-visible { outline: 3px solid var(--primary-text); outline-offset: 2px; }
+  .thumb { display: block; width: 100%; height: auto; aspect-ratio: 1200 / 630; object-fit: cover; background: #e9ece8; }
+  .thumb--empty { display: flex; align-items: center; justify-content: center; color: var(--text-sub); font-weight: 600;
+                   background: repeating-linear-gradient(135deg, #e9ece8 0 14px, #f1f3f0 14px 28px); }
+  .card__body { flex: 1; display: flex; flex-direction: column; gap: 8px; padding: 20px 22px 24px; }
+  .tag { align-self: flex-start; padding: 2px 10px; border-radius: 999px; background: #e6f4ec; color: var(--ink); font-size: .8125rem; font-weight: 700; }
+  .card h2 { margin: 0; font-size: 1.25rem; line-height: 1.35; }
+  .card p { margin: 0; color: var(--text-body); font-size: .95rem; }
+  .card .meta { margin-top: auto; padding-top: 8px; color: var(--text-sub); font-size: .8125rem; }
+  .card--soon .tag { background: #eee; color: var(--text-sub); }
+  .rules { margin-top: 40px; padding: 24px; background: #fff; border: 1px solid var(--line); border-radius: 16px; }
+  .rules h2 { margin: 0 0 8px; font-size: 1.0625rem; }
+  .rules ul { margin: 0; padding-left: 1.2em; color: var(--text-body); }
+  footer { padding: 8px 16px 40px; text-align: center; color: var(--text-sub); font-size: .8125rem; }
+  @media (prefers-reduced-motion: reduce) { .card { transition: none; } a.card:hover, a.card:focus-visible { transform: none; } }
+</style>
+</head>
+<body>
+<header class="hero">
+  <h1>교회사랑넷 <span>GEO 리뉴얼 데모</span></h1>
+  <p>같은 원고·같은 SEO/GEO 마크업<span class="nobr">(h1·정의문·FAQ·JSON-LD)</span> 위에서 시각 연출만 바꾼 데모입니다. 고객 공개 전 내부 검토용입니다.</p>
+  <ul class="badges"><li>모든 쪽 noindex</li><li>robots.txt 전체 차단</li><li>내부 검토용</li></ul>
+</header>
+<main>
+  <ul class="cards">
+    <li><a class="card" href="base/"><img class="thumb" src="thumb-base.jpg" alt="" width="1200" height="630" loading="lazy"><div class="card__body"><span class="tag">base</span><h2>현재 데모 · 원본 디자인 유지</h2><p>교회사랑넷 원본 디자인(녹색 브랜드·웜 그레이·민트·다크 틸 컬러 블로킹)을 그대로 두고 SEO/GEO 구조로 다시 짠 정적 사이트</p><p class="meta">51쪽 · 모든 쪽 noindex · 내부 검토용</p></div></a></li>
+    <li><a class="card" href="cinematic/"><img class="thumb" src="thumb-cinematic.jpg" alt="" width="1200" height="630" loading="lazy"><div class="card__body"><span class="tag">삼성 CSR 기법</span><h2>데모 A · 시네마틱</h2><p>풀블리드 실사·영상 히어로와 진행 바, 큰 가격 큐브, 번호 hover 목록, 7단계 스크롤 프레임 시퀀스 — 외부 라이브러리 없음</p><p class="meta">51쪽 · 모든 쪽 noindex · 내부 검토용</p></div></a></li>
+    <li><a class="card" href="campaign/"><img class="thumb" src="thumb-campaign.jpg" alt="" width="1200" height="630" loading="lazy"><div class="card__body"><span class="tag">멜론 캠페인 기법</span><h2>데모 B · 캠페인</h2><p>멜론 캠페인 기법 — 흰 바탕·녹색 1색·큰 고딕, 기기 화면 위 실제 캡처, 영상 마스크 축소·노트북 프레임 스크럽·마퀴</p><p class="meta">51쪽 · 모든 쪽 noindex · 내부 검토용</p></div></a></li>
+  </ul>
+  <section class="rules" aria-labelledby="rules-title">
+    <h2 id="rules-title">세 데모 공통</h2>
+    <ul>
+      <li>본문 글자·h1·정의문·FAQ·요금·회사 정보는 세 데모가 같습니다(원고 한 벌). 다른 것은 색·서체·배치·연출입니다.</li>
+      <li>모든 쪽은 검색엔진 색인에서 제외됩니다<span class="nobr">(meta robots noindex,</span> <span class="nobr">robots.txt Disallow).</span></li>
+      <li>데모 속 신청·상담 링크는 실사이트<span class="nobr">(church-love.net)</span>로 이어집니다. 시험 삼아 실제 신청서를 내지 마세요.</li>
+    </ul>
+  </section>
+</main>
+<footer>애니라인㈜ 교회사랑넷 · 내부 검토용 데모 · 빌드 2026-11-19</footer>
+</body>
+</html>

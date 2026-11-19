@@ -1,0 +1,7 @@
+/* build.py 가 site.json tokens 에서 만든 파일 — 직접 고치지 말 것 */
+:root {
+  --c-primary: #2eab6f;
+  --c-primary-text: #1c8458;
+  --c-on-primary: #111;
+  --c-primary-large: #19976c;
+}

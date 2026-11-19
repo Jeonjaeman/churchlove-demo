@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="ko" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.remove("no-js")</script>
+<title>교회홈페이지CMS 관리시스템 직접 수정 - 교회사랑넷</title>
+<meta name="description" content="교회사랑넷 CMS 관리시스템은 교회가 홈페이지 글·사진·메뉴·게시판·팝업을 관리자 화면에서 직접 고치는 홈페이지 관리 프로그램입니다. 주요 메뉴와 쓰는 순서를 실제 화면으로 안내합니다.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://www.church-love.net/features/cms/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="교회사랑넷">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:title" content="교회홈페이지CMS 관리시스템 직접 수정 - 교회사랑넷">
+<meta property="og:description" content="교회사랑넷 CMS 관리시스템은 교회가 홈페이지 글·사진·메뉴·게시판·팝업을 관리자 화면에서 직접 고치는 홈페이지 관리 프로그램입니다. 주요 메뉴와 쓰는 순서를 실제 화면으로 안내합니다.">
+<meta property="og:url" content="https://www.church-love.net/features/cms/">
+<meta property="og:image" content="https://www.church-love.net/assets/img/og-default.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#2eab6f">
+<link rel="icon" href="/churchlove-demo/cinematic/assets/img/favicon.svg">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="/churchlove-demo/cinematic/assets/css/tokens.css">
+<link rel="stylesheet" href="/churchlove-demo/cinematic/assets/css/brand.css">
+<link rel="stylesheet" href="/churchlove-demo/cinematic/assets/css/base.css">
+<link rel="stylesheet" href="/churchlove-demo/cinematic/assets/css/components.css">
+<link rel="stylesheet" href="/churchlove-demo/cinematic/assets/css/church.css"><link rel="stylesheet" href="/churchlove-demo/cinematic/assets/css/features.css"><link rel="stylesheet" href="/churchlove-demo/cinematic/assets/css/cinematic.css">
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://www.church-love.net/#organization",
+   "name": "애니라인㈜",
+   "legalName": "애니라인 주식회사",
+   "alternateName": "교회사랑넷",
+   "brand": {
+    "@type": "Brand",
+    "name": "교회사랑넷"
+   },
+   "taxID": "301-81-56575",
+   "telephone": "1661-9106",
+   "email": "coo@church-love.net",
+   "address": {
+    "@type": "PostalAddress",
+    "postalCode": "28378",
+    "addressRegion": "충청북도",
+    "addressLocality": "청주시 흥덕구",
+    "streetAddress": "2순환로 1270 라인빌딩",
+    "addressCountry": "KR"
+   },
+   "contactPoint": [
+    {
+     "@type": "ContactPoint",
+     "telephone": "1661-9106",
+     "contactType": "customer service",
+     "areaServed": "KR",
+     "availableLanguage": "ko",
+     "hoursAvailable": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+       "Monday",
+       "Tuesday",
+       "Wednesday",
+       "Thursday",
+       "Friday"
+      ],
+      "opens": "09:30",
+      "closes": "17:00"
+     }
+    },
+    {
+     "@type": "ContactPoint",
+     "telephone": "070-7525-7285",
+     "contactType": "sales",
+     "availableLanguage": "ko"
+    },
+    {
+     "@type": "ContactPoint",
+     "telephone": "+82-43-272-0903",
+     "contactType": "customer service",
+     "areaServed": "Worldwide",
+     "availableLanguage": [
+      "ko",
+      "en"
+     ]
+    }
+   ],
+   "sameAs": [
+    "https://blog.naver.com/churchlovenet",
+    "https://www.facebook.com/churchlovenet",
+    "https://www.instagram.com/churchlovenet/",
+    "http://pf.kakao.com/_TUkyxj"
+   ],
+   "url": "https://www.church-love.net/"
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://www.church-love.net/#website",
+   "url": "https://www.church-love.net/",
+   "name": "교회사랑넷",
+   "inLanguage": "ko-KR",
+   "publisher": {
+    "@id": "https://www.church-love.net/#organization"
+   }
+  },
+  {
+   "@type": "Service",
+   "@id": "https://www.church-love.net/#service",
+   "name": "교회사랑넷 교회 홈페이지 제작",
+   "url": "https://www.church-love.net/",
+   "provider": {
+    "@id": "https://www.church-love.net/#organization"
+   },
+   "areaServed": "KR",
+   "serviceType": "교회 홈페이지 제작·유지보수",
+   "description": "PC·태블릿·스마트폰에 맞는 반응형 교회 홈페이지를 AI 하이브리드·디자인선택형·디자인편집형·주문제작형 4가지 방식으로 만들고, 교회가 직접 고치는 CMS 관리시스템과 월 유지보수를 제공하는 서비스.",
+   "audience": {
+    "@type": "Audience",
+    "audienceType": "교회·교단·선교 단체"
+   },
+   "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "교회사랑넷 홈페이지 제작·유지보수 요금",
+    "itemListElement": [
+     {
+      "@type": "Offer",
+      "name": "AI 하이브리드 제작",
+      "url": "https://www.church-love.net/homepage/ai-hybrid/",
+      "description": "출시 이벤트 구축비 0원(정가 110,000원). A. 자체관리 유지보수(월 29,700원) 가입 조건. 메인디자인 1p + 서브디자인메뉴 9p.",
+      "price": "0",
+      "priceCurrency": "KRW",
+      "priceSpecification": [
+       {
+        "@type": "PriceSpecification",
+        "name": "구축비(1회)",
+        "priceCurrency": "KRW",
+        "price": "0"
+       },
+       {
+        "@type": "UnitPriceSpecification",
+        "name": "월 관리비",
+        "price": "29700",
+        "priceCurrency": "KRW",
+        "billingDuration": "P1M",
+        "unitCode": "MON"
+       }
+      ]
+     },
+     {
+      "@type": "Offer",
+      "name": "디자인선택형 홈페이지",
+      "url": "https://www.church-love.net/homepage/design-select/",
+      "description": "구축비 5P 198,000원 · 10P 330,000원 · 15P 440,000원 · 20P 550,000원.",
+      "price": "198000",
+      "priceCurrency": "KRW",
+      "priceSpecification": [
+       {
+        "@type": "PriceSpecification",
+        "name": "구축비(1회)",
+        "priceCurrency": "KRW",
+        "minPrice": "198000"
+       },
+       {
+        "@type": "UnitPriceSpecification",
+        "name": "월 관리비",
+        "price": "29700",
+        "priceCurrency": "KRW",
+        "billingDuration": "P1M",
+        "unitCode": "MON"
+       }
+      ]
+     },
+     {
+      "@type": "Offer",
+      "name": "디자인편집형 홈페이지",
+      "url": "https://www.church-love.net/homepage/design-edit/",
+      "description": "디자인화면 20p, 구축비 1,100,000원부터.",
+      "price": "1100000",
+      "priceCurrency": "KRW",
+      "priceSpecification": [
+       {
+        "@type": "PriceSpecification",
+        "name": "구축비(1회)",
+        "priceCurrency": "KRW",
+        "minPrice": "1100000"
+       },
+       {
+        "@type": "UnitPriceSpecification",
+        "name": "월 관리비",
+        "price": "29700",
+        "priceCurrency": "KRW",
+        "billingDuration": "P1M",
+        "unitCode": "MON"
+       }
+      ]
+     },
+     {
+      "@type": "Offer",
+      "name": "주문제작형 홈페이지",
+      "url": "https://www.church-love.net/homepage/custom-order/",
+      "description": "메인디자인 및 콘텐츠디자인 20p, 구축비 별도협의. 가격은 견적으로 정합니다."
+     },
+     {
+      "@type": "Offer",
+      "name": "B. 스탠다드 유지보수",
+      "url": "https://www.church-love.net/maintenance/",
+      "priceSpecification": {
+       "@type": "UnitPriceSpecification",
+       "name": "월 관리비",
+       "price": "66000",
+       "priceCurrency": "KRW",
+       "billingDuration": "P1M",
+       "unitCode": "MON"
+      }
+     },
+     {
+      "@type": "Offer",
+      "name": "C. 프리미엄 유지보수",
+      "url": "https://www.church-love.net/maintenance/",
+      "priceSpecification": {
+       "@type": "UnitPriceSpecification",
+       "name": "월 관리비",
+       "price": "99000",
+       "priceCurrency": "KRW",
+       "billingDuration": "P1M",
+       "unitCode": "MON"
+      }
+     },
+     {
+      "@type": "Offer",
+      "name": "D. 스페셜 유지보수",
+      "url": "https://www.church-love.net/maintenance/",
+      "priceSpecification": {
+       "@type": "UnitPriceSpecification",
+       "name": "월 관리비",
+       "price": "121000",
+       "priceCurrency": "KRW",
+       "billingDuration": "P1M",
+       "unitCode": "MON"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://www.church-love.net/features/cms/#webpage",
+   "url": "https://www.church-love.net/features/cms/",
+   "name": "교회홈페이지CMS 관리시스템 직접 수정 - 교회사랑넷",
+   "description": "교회사랑넷 CMS 관리시스템은 교회가 홈페이지 글·사진·메뉴·게시판·팝업을 관리자 화면에서 직접 고치는 홈페이지 관리 프로그램입니다. 주요 메뉴와 쓰는 순서를 실제 화면으로 안내합니다.",
+   "inLanguage": "ko-KR",
+   "isPartOf": {
+    "@id": "https://www.church-love.net/#website"
+   },
+   "about": {
+    "@id": "https://www.church-love.net/#service"
+   },
+   "dateModified": "2026-11-19",
+   "breadcrumb": {
+    "@id": "https://www.church-love.net/features/cms/#breadcrumb"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://www.church-love.net/features/cms/#breadcrumb",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "홈",
+     "item": "https://www.church-love.net/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "주요기능",
+     "item": "https://www.church-love.net/features/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "CMS 관리시스템",
+     "item": "https://www.church-love.net/features/cms/"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://www.church-love.net/features/cms/#faq",
+   "isPartOf": {
+    "@id": "https://www.church-love.net/features/cms/#webpage"
+   },
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "CMS는 언제 받을 수 있나요?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "CMS는 홈페이지 구축이 끝나면 사용법 교육과 함께 드리는 홈페이지 관리시스템입니다. 관리자 로그인 후 바로 쓸 수 있습니다."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "게시판이나 사진앨범을 더 만들면 비용이 드나요?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "들지 않습니다. CMS에서 추가 버튼 하나로 게시판과 사진앨범을 만들 수 있고, 교회에서 필요한 만큼 만들어 쓸 수 있습니다."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "메뉴 이름이나 순서도 교회에서 바꿀 수 있나요?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "네. 메뉴관리에서 메뉴 추가, 메뉴명 수정, 메뉴 이동을 교회가 직접 합니다."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "관리자를 여러 명 둘 수 있나요?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "네. CMS는 관리자를 여러 명 등록할 수 있고, 관리자마다 관리 권한을 따로 줄 수 있습니다."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "팝업창은 어떻게 올리나요?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "팝업&배너 관리에서 사진이나 이미지를 자료실에 첨부하듯 올리면 홈페이지에 팝업창이 자동으로 등록됩니다."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body class="theme-cinematic" data-base="/churchlove-demo/cinematic">
+<a class="skip-link" href="#main">본문 바로가기</a>
+<div class="demo-bar"><a href="/churchlove-demo/">← 데모 목록</a><span>데모 <strong>A · 시네마틱</strong> · 내부 검토용 · 검색 색인 제외</span></div>
+<header class="site-header">
+  <div class="header-top container">
+    <a class="brand" href="/churchlove-demo/cinematic/" aria-label="교회사랑넷 홈"><span class="brand__text">교회사랑넷</span></a>
+    <nav class="gnb" id="gnb" aria-label="주 메뉴">
+      <ul class="gnb__list"><li class="gnb__item has-sub"><a class="gnb__link" href="/churchlove-demo/cinematic/homepage/">홈페이지 제작</a><button class="gnb__sub-toggle" type="button" aria-expanded="false"><span class="visually-hidden">홈페이지 제작 하위 메뉴</span></button><ul class="gnb__sub"><li><a href="/churchlove-demo/cinematic/homepage/">제작 방식 비교</a></li><li><a href="/churchlove-demo/cinematic/homepage/ai-hybrid/">AI 하이브리드 제작</a></li><li><a href="/churchlove-demo/cinematic/homepage/design-select/">디자인선택형</a></li><li><a href="/churchlove-demo/cinematic/homepage/design-edit/">디자인편집형</a></li><li><a href="/churchlove-demo/cinematic/homepage/custom-order/">주문제작형</a></li><li><a href="/churchlove-demo/cinematic/homepage/overseas/">해외 교회 홈페이지</a></li><li><a href="/churchlove-demo/cinematic/institutions/">기관 홈페이지</a></li><li><a href="/churchlove-demo/cinematic/homepage/process/">구축 진행 순서</a></li><li><a href="/churchlove-demo/cinematic/homepage/why/">교회사랑넷을 고르는 이유</a></li></ul></li><li class="gnb__item"><a class="gnb__link" href="/churchlove-demo/cinematic/pricing/">요금</a></li><li class="gnb__item has-sub"><a class="gnb__link" href="/churchlove-demo/cinematic/features/">주요기능</a><button class="gnb__sub-toggle" type="button" aria-expanded="false"><span class="visually-hidden">주요기능 하위 메뉴</span></button><ul class="gnb__sub"><li><a href="/churchlove-demo/cinematic/features/cms/">CMS 관리시스템</a></li><li><a href="/churchlove-demo/cinematic/features/ccs/">CCS 유지보수 요청</a></li><li><a href="/churchlove-demo/cinematic/features/church-register/">교적관리 시스템</a></li><li><a href="/churchlove-demo/cinematic/features/smartphone-yolam/">온라인 스마트폰 요람</a></li><li><a href="/churchlove-demo/cinematic/features/internet-sermon/">인터넷 설교방송</a></li><li><a href="/churchlove-demo/cinematic/features/sms/">SMS 문자발송</a></li><li><a href="/churchlove-demo/cinematic/features/mobile-app/">모바일 어플</a></li><li><a href="/churchlove-demo/cinematic/features/bible-reading/">성경 읽<span class="nobr">기·</span><wbr>쓰기</a></li><li><a href="/churchlove-demo/cinematic/features/webzine/">웹<span class="nobr">진·</span><wbr>모바일 주보</a></li><li><a href="/churchlove-demo/cinematic/features/electronic-album/">전자앨범</a></li></ul></li><li class="gnb__item has-sub"><a class="gnb__link" href="/churchlove-demo/cinematic/maintenance/">유지보수</a><button class="gnb__sub-toggle" type="button" aria-expanded="false"><span class="visually-hidden">유지보수 하위 메뉴</span></button><ul class="gnb__sub"><li><a href="/churchlove-demo/cinematic/maintenance/">유지보수 플랜</a></li><li><a href="/churchlove-demo/cinematic/maintenance/security/">보안관리</a></li><li><a href="/churchlove-demo/cinematic/maintenance/backup/">백업관리</a></li><li><a href="/churchlove-demo/cinematic/maintenance/server/">서버관리</a></li><li><a href="/churchlove-demo/cinematic/maintenance/privacy/">개인정보 보호</a></li></ul></li><li class="gnb__item"><a class="gnb__link" href="/churchlove-demo/cinematic/portfolio/">포트폴리오</a></li><li class="gnb__item"><a class="gnb__link" href="/churchlove-demo/cinematic/marketing/naver-blog-place/">블로<span class="nobr">그·</span><wbr>플레이스</a></li><li class="gnb__item has-sub"><a class="gnb__link" href="/churchlove-demo/cinematic/support/">고객센터</a><button class="gnb__sub-toggle" type="button" aria-expanded="false"><span class="visually-hidden">고객센터 하위 메뉴</span></button><ul class="gnb__sub"><li><a href="/churchlove-demo/cinematic/support/">고객센터 안내</a></li><li><a href="/churchlove-demo/cinematic/support/notice/">공지사항</a></li><li><a href="/churchlove-demo/cinematic/support/consult/">온라인 상담</a></li><li><a href="/churchlove-demo/cinematic/support/remote/">원격지원</a></li><li><a href="/churchlove-demo/cinematic/support/bank-account/">입금 계좌</a></li><li><a href="/churchlove-demo/cinematic/support/cash-receipt/">현금영수증 신청</a></li><li><a href="/churchlove-demo/cinematic/guide/">가이드</a></li><li><a href="/churchlove-demo/cinematic/faq/">자주 묻는 질문</a></li></ul></li><li class="gnb__item has-sub"><a class="gnb__link" href="/churchlove-demo/cinematic/about/">회사소개</a><button class="gnb__sub-toggle" type="button" aria-expanded="false"><span class="visually-hidden">회사소개 하위 메뉴</span></button><ul class="gnb__sub"><li><a href="/churchlove-demo/cinematic/about/">회사 소개</a></li><li><a href="/churchlove-demo/cinematic/about/greeting/">인사말</a></li><li><a href="/churchlove-demo/cinematic/about/#history">연혁</a></li><li><a href="/churchlove-demo/cinematic/about/#certification">인증현황</a></li><li><a href="/churchlove-demo/cinematic/about/#location">오시는 길</a></li></ul></li></ul>
+      <div class="gnb__mobile-cta"><a class="btn btn--accent" href="/churchlove-demo/cinematic/apply/">구축 신청하기</a><a class="btn btn--ghost-light" href="tel:16619106">전화 상담 1661-9106</a></div>
+    </nav>
+    <div class="header-util"><a class="header-tel" href="tel:16619106"><span class="visually-hidden">전화 상담 </span>1661-9106</a><ul class="remote-links" aria-label="원격지원"><li><a href="http://helpu.kr/anyline1" rel="noopener noreferrer">01</a></li><li><a href="http://helpu.kr/anyline2" rel="noopener noreferrer">02</a></li><li><a href="http://helpu.kr/anyline3" rel="noopener noreferrer">03</a></li></ul><a class="btn btn--accent btn--sm" href="/churchlove-demo/cinematic/apply/">구축 신청하기</a></div>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="gnb">
+      <span class="nav-toggle__bar" aria-hidden="true"></span>
+      <span class="visually-hidden">메뉴 열기</span>
+    </button>
+  </div>
+</header>
+
+<nav class="breadcrumb" aria-label="현재 위치"><div class="container"><ol><li><a href="/churchlove-demo/cinematic/">홈</a></li><li><a href="/churchlove-demo/cinematic/features/">주요기능</a></li><li aria-current="page">CMS 관리시스템</li></ol></div></nav>
+<main id="main">
+<section class="page-hero">
+  <div class="container">
+    <p class="badge">주요기능</p>
+    <h1>교회 홈페이지 CMS 관리시스템</h1>
+    <p class="lead">글자 몇 개를 바꾸려고 제작 업체에 연락하고 기다리고 계신가요? 교회사랑넷 CM<span class="nobr">S(</span>Church-love net Management System<span class="nobr">)로</span> 교회 홈페이지를 직접 관리하세요.</p>
+  </div>
+</section>
+
+<section class="section section--tight" aria-labelledby="def-title">
+  <div class="container container--narrow">
+    <h2 id="def-title" class="visually-hidden">CMS 관리시스템이란</h2>
+    <p class="definition">교회사랑넷 CMS는 홈페이지 내용 수정, 메뉴 변경, 게시판 추가 같은 유지보수를 교회가 직접 하는 관리자 시스템입니다.</p>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="need-title">
+  <div class="container container--narrow">
+    <h2 id="need-title" class="section-title">이럴 때 필요합니다</h2>
+    <ul class="check-list">
+      <li>홈페이지 글자 몇 개를 고치려고 제작 업체에 부탁하고 기다릴 때</li>
+      <li>앨범 게시판이 몇 개 더 필요한데 비용이 걱정될 때</li>
+      <li>한번 정한 메뉴를 바꾸고 싶을 때</li>
+      <li>사역자가 바뀌어 섬기는 이 소개와 매년 연혁을 고쳐야 할 때</li>
+      <li>팝업창을 교회에서 바로 올리고 내리고 싶을 때</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section--warm" aria-labelledby="feat-title">
+  <div class="container">
+    <div class="section-head">
+      <p class="section-eyebrow">FEATURES</p>
+      <h2 id="feat-title" class="section-title">CMS 관리시스템의 주요 메뉴</h2>
+    </div>
+    <dl class="feature-list">
+      <div><dt>회원관리</dt><dd>홈페이지 회원 관리와 승인, 레벨 부여, 가입폼 관리, 회원에게 메일 보내기를 합니다.</dd></div>
+      <div><dt>관리자관리</dt><dd>관리자를 여러 명 등록하고 관리자별로 관리 권한을 줍니다.</dd></div>
+      <div><dt>메뉴관리</dt><dd>메뉴 추가, 메뉴명 수정, 메뉴 이동을 교회에서 언제든 합니다.</dd></div>
+      <div><dt>페이지관리</dt><dd>홈페이지 내용을 원 관리자가 직접 바꿉니다.</dd></div>
+      <div><dt>게시판 관리</dt><dd>추가 버튼 하나로 게시판과 사진앨범을 만듭니다. 추가할 때마다 비용이 들지 않습니다.</dd></div>
+      <div><dt>연혁관리</dt><dd>년도별 교회 연혁을 교회에서 자유롭게 등<span class="nobr">록·</span><wbr>수<span class="nobr">정·</span><wbr>삭제합니다.</dd></div>
+      <div><dt>섬기는 이 관리</dt><dd>목사님과 섬기는 분들의 사진과 정보를 등<span class="nobr">록·</span><wbr>수<span class="nobr">정·</span><wbr>삭제합니다.</dd></div>
+      <div><dt>팝업&amp;배너 관리</dt><dd>이미지를 첨부하듯 올리면 홈페이지에 팝업창이 자동으로 등록됩니다.</dd></div>
+      <div><dt>통계관리</dt><dd>일<span class="nobr">별·</span><wbr>월<span class="nobr">별·</span><wbr>요일별 방문자 통계와 페이지별 방문횟수를 그래프로 봅니다.</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="steps-title">
+  <div class="container container--narrow">
+    <h2 id="steps-title" class="section-title">CMS 쓰는 순서</h2>
+    <ol class="steps">
+      <li><strong>CMS 받기</strong> — 홈페이지 구축이 끝나면 사용법 교육과 함께 CMS를 드립니다.</li>
+      <li><strong>관리자 로그인</strong> — <a href="https://skin-ch.anyline.co.kr/">교회사랑넷 관리자 로그인</a> 화면으로 들어갑니다.</li>
+      <li><strong>메인페이지 확인</strong> — 회원가입 현황, 최근 게시물, 접속통계, 업무요청 처리현황을 한번에 봅니다.</li>
+      <li><strong>필요한 메뉴에서 수정</strong> — 메뉴관<span class="nobr">리·</span><wbr>페이지관<span class="nobr">리·</span><wbr>게시판 관<span class="nobr">리·</span><wbr>팝업&amp;배너 관리에서 직접 고칩니다.</li>
+      <li><strong>어려운 작업은 요청</strong> — 직접 하기 어려운 수정은 <a href="/churchlove-demo/cinematic/features/ccs/">CCS 유지보수 요청</a>으로 담당자에게 맡깁니다.</li>
+    </ol>
+  </div>
+</section>
+
+<section class="section section--blue" aria-labelledby="screens-title">
+  <div class="container">
+    <div class="section-head">
+      <p class="section-eyebrow">SCREEN</p>
+      <h2 id="screens-title" class="section-title">CMS 실제 화면</h2>
+      <p class="section-lead">CMS 메인페이지의 10가지 정보와 관리 메뉴 화면입니다.</p>
+    </div>
+    <figure class="shot shot-grid--single">
+      <img src="/churchlove-demo/cinematic/assets/img/cms-screen-1.webp" width="770" height="507" alt="CMS 메인페이지 — 기본정보, 도메인, 소식, CCS 유지보수 현황, 최근 게시물·댓글·사진, 회원 데이터, 공지가 번호 01~10으로 표시된 화면" loading="lazy">
+      <figcaption>CMS 메인페이지 — 번호별 내용은 아래 목록과 같습니다.</figcaption>
+    </figure>
+    <ol class="shot-legend" aria-label="CMS 메인페이지 번호별 내용">
+      <li><strong>관리자페이지 기본정보</strong>기본정보, 서버 사용량, 담당자정보 확인</li>
+      <li><strong>도메인 정보 확인</strong>사용 중인 도메인의 만료일을 따로 검색하지 않아도 확인</li>
+      <li><strong>교회사랑넷 소식 알림</strong>꼭 읽어야 할 공지를 배너로 확인</li>
+      <li><strong>CCS 유지보수 현황확인</strong>유지보수 요청과 처리현황을 한눈에 확인</li>
+      <li><strong>최근 게시물 확인</strong>모든 게시판의 최근 글을 모아 보기</li>
+      <li><strong>최근 댓글 확인</strong>모든 게시판의 댓글을 모아 보기</li>
+      <li><strong>최근 등록 사진</strong>최근 올라온 사진을 모아 보기</li>
+      <li><strong>회원데이터 확인</strong>전체 회원가입 인원과 신규 가입회원 정보</li>
+      <li><strong>기능업데이트 공지</strong>정기 기능 업데이트를 실시간으로 확인</li>
+      <li><strong>교회사랑넷 공지</strong>교회사랑넷 소식을 공지사항으로 확인</li>
+    </ol>
+    <ul class="shot-grid shot-grid--after">
+      <li><figure class="shot"><img src="/churchlove-demo/cinematic/assets/img/cms-screen-2.webp" width="770" height="607" alt="CMS 회원관리 화면 — 회원 목록과 레벨 지정(이름·연락처는 흐림 처리)" loading="lazy"><figcaption>회원관리</figcaption></figure></li>
+      <li><figure class="shot"><img src="/churchlove-demo/cinematic/assets/img/cms-screen-3.webp" width="770" height="620" alt="CMS 관리자관리 화면 — 관리자 목록과 관리자 추가 버튼" loading="lazy"><figcaption>관리자관리</figcaption></figure></li>
+      <li><figure class="shot"><img src="/churchlove-demo/cinematic/assets/img/cms-screen-4.webp" width="775" height="553" alt="CMS 메뉴관리 화면 — 메뉴 추가 버튼과 홈페이지에 반영된 메뉴" loading="lazy"><figcaption>메뉴관리</figcaption></figure></li>
+      <li><figure class="shot"><img src="/churchlove-demo/cinematic/assets/img/cms-screen-5.webp" width="770" height="514" alt="CMS 접속자통계 화면 — 날짜별 방문자 막대그래프" loading="lazy"><figcaption>통계관리 — 접속자통계</figcaption></figure></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="related-title">
+  <div class="container container--narrow">
+    <h2 id="related-title" class="section-title">함께 보면 좋은 기능</h2>
+    <ul class="related-links">
+      <li><a href="/churchlove-demo/cinematic/features/ccs/">CCS 실시간 유지보수 요청</a></li>
+      <li><a href="/churchlove-demo/cinematic/features/church-register/">교적관리 시스템</a></li>
+      <li><a href="/churchlove-demo/cinematic/features/electronic-album/">교회 전자앨범</a></li>
+      <li><a href="/churchlove-demo/cinematic/features/">주요기능 10가지 전체</a></li>
+      <li><a href="/churchlove-demo/cinematic/homepage/why/">교회사랑넷 홈페이지를 고르는 이유</a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section faq" aria-labelledby="faq-title"><div class="container container--narrow"><h2 id="faq-title" class="section-title">자주 묻는 질문</h2><details class="faq-item"><summary><span class="faq-q">CMS는 언제 받을 수 있나요?</span></summary><div class="faq-answer"><p>CMS는 홈페이지 구축이 끝나면 사용법 교육과 함께 드리는 홈페이지 관리시스템입니다. 관리자 로그인 후 바로 쓸 수 있습니다.</p></div></details><details class="faq-item"><summary><span class="faq-q">게시판이나 사진앨범을 더 만들면 비용이 드나요?</span></summary><div class="faq-answer"><p>들지 않습니다. CMS에서 추가 버튼 하나로 게시판과 사진앨범을 만들 수 있고, 교회에서 필요한 만큼 만들어 쓸 수 있습니다.</p></div></details><details class="faq-item"><summary><span class="faq-q">메뉴 이름이나 순서도 교회에서 바꿀 수 있나요?</span></summary><div class="faq-answer"><p>네. 메뉴관리에서 메뉴 추가, 메뉴명 수정, 메뉴 이동을 교회가 직접 합니다.</p></div></details><details class="faq-item"><summary><span class="faq-q">관리자를 여러 명 둘 수 있나요?</span></summary><div class="faq-answer"><p>네. CMS는 관리자를 여러 명 등록할 수 있고, 관리자마다 관리 권한을 따로 줄 수 있습니다.</p></div></details><details class="faq-item"><summary><span class="faq-q">팝업창은 어떻게 올리나요?</span></summary><div class="faq-answer"><p>팝업&amp;배너 관리에서 사진이나 이미지를 자료실에 첨부하듯 올리면 홈페이지에 팝업창이 자동으로 등록됩니다.</p></div></details></div></section>
+</main>
+<!--band--><aside class="cta-band cine-band" aria-labelledby="cta-band-title">
+  <div class="cine-band__media" aria-hidden="true">
+    <picture>
+      <source type="image/avif" srcset="/churchlove-demo/cinematic/assets/img/cine/cine-cta-poster-960.avif 960w, /churchlove-demo/cinematic/assets/img/cine/cine-cta-poster-1440.avif 1440w" sizes="100vw">
+      <img src="/churchlove-demo/cinematic/assets/img/cine/cine-cta-poster-1440.webp" srcset="/churchlove-demo/cinematic/assets/img/cine/cine-cta-poster-960.webp 960w, /churchlove-demo/cinematic/assets/img/cine/cine-cta-poster-1440.webp 1440w" sizes="100vw" width="1440" height="617" alt="" loading="lazy" decoding="async">
+    </picture>
+  </div>
+  <div class="container cta-band__inner">
+    <p class="cta-band__eyebrow">구축 상담</p>
+    <h2 id="cta-band-title" class="cta-band__title">교회 홈페이지 상담 1661-9106</h2>
+    <p class="cta-band__desc">평일 09:30~17:00 <span class="nobr">(토·일·공휴일 휴무).</span> 상담부터 구축 완료까지 1:1 담당자가 함께 진행합니다.</p>
+    <span class="vline" aria-hidden="true"></span>
+    <div class="cta-band__actions"><a class="btn btn--accent btn--lg" href="/churchlove-demo/cinematic/apply/">구축 신청하기</a><a class="btn btn--ghost-light btn--lg" href="tel:16619106">전화 상담 1661-9106</a></div>
+  </div>
+</aside><!--/band-->
+
+<footer class="site-footer">
+  <div class="container">
+    <nav class="footer-nav" aria-label="사이트맵"><div><h2 class="footer-nav__title">홈페이지 제작</h2><ul><li><a href="/churchlove-demo/cinematic/homepage/">제작 방식 비교</a></li><li><a href="/churchlove-demo/cinematic/homepage/ai-hybrid/">AI 하이브리드 제작</a></li><li><a href="/churchlove-demo/cinematic/homepage/design-select/">디자인선택형</a></li><li><a href="/churchlove-demo/cinematic/homepage/design-edit/">디자인편집형</a></li><li><a href="/churchlove-demo/cinematic/homepage/custom-order/">주문제작형</a></li><li><a href="/churchlove-demo/cinematic/institutions/">기관 홈페이지</a></li><li><a href="/churchlove-demo/cinematic/pricing/">요금</a></li><li><a href="/churchlove-demo/cinematic/portfolio/">포트폴리오</a></li></ul></div><div><h2 class="footer-nav__title">기<span class="nobr">능·</span><wbr>유지보수</h2><ul><li><a href="/churchlove-demo/cinematic/features/">주요기능</a></li><li><a href="/churchlove-demo/cinematic/features/church-register/">교적관리 시스템</a></li><li><a href="/churchlove-demo/cinematic/features/internet-sermon/">인터넷 설교방송</a></li><li><a href="/churchlove-demo/cinematic/maintenance/">유지보수 플랜</a></li><li><a href="/churchlove-demo/cinematic/maintenance/security/">보안관리</a></li><li><a href="/churchlove-demo/cinematic/marketing/naver-blog-place/">블로<span class="nobr">그·</span><wbr>플레이스</a></li></ul></div><div><h2 class="footer-nav__title">고객센터</h2><ul><li><a href="/churchlove-demo/cinematic/apply/">구축 신<span class="nobr">청·</span><wbr>견적</a></li><li><a href="/churchlove-demo/cinematic/support/consult/">온라인 상담</a></li><li><a href="/churchlove-demo/cinematic/support/remote/">원격지원</a></li><li><a href="/churchlove-demo/cinematic/support/bank-account/">입금 계좌</a></li><li><a href="/churchlove-demo/cinematic/faq/">자주 묻는 질문</a></li><li><a href="/churchlove-demo/cinematic/support/notice/">공지사항</a></li></ul></div><div><h2 class="footer-nav__title">회사</h2><ul><li><a href="/churchlove-demo/cinematic/about/">회사 소개</a></li><li><a href="/churchlove-demo/cinematic/about/greeting/">인사말</a></li><li><a href="/churchlove-demo/cinematic/about/#history">연혁</a></li><li><a href="/churchlove-demo/cinematic/about/#location">오시는 길</a></li><li><a href="https://skin-ch.anyline.co.kr/" rel="noopener noreferrer">관리자 로그인</a></li></ul></div></nav>
+    <div class="footer-info">
+      <p class="footer-info__brand">교회사랑넷</p>
+      <address><p><strong><span class="nobr">애니라인㈜</span></strong> · 대표 이태윤 · 사업자등록번호 301-81-56575 · 통신판매업신고 제2008-충북청주-0445호</p><p><span class="nobr">(28378)</span> 충북 청주시 흥덕구 2순환로 1270 라인빌딩 <span class="nobr">(가경동 1753번지)</span></p><p>대표 <a href="tel:16619106">1661-9106</a> · 직통 <a href="tel:07075257285">070-7525-7285</a> · 해외 <a href="tel:+82432720903">+82-43-272-0903</a> · 팩스 043-272-0912 · 이메일 <a href="mailto:coo@church-love.net">coo@church-love.net</a></p><p>상담 시간 평일 09:30~17:00 <span class="nobr">(토·일·공휴일 휴무)</span></p><p>입금 계좌 신한은행 140-006-089794 (예금주 <span class="nobr">애니라인(주)</span>)</p></address>
+      <ul class="footer-social" aria-label="교회사랑넷 채널"><li><a href="https://blog.naver.com/churchlovenet" rel="noopener noreferrer">네이버 블로그</a></li><li><a href="http://pf.kakao.com/_TUkyxj" rel="noopener noreferrer">카카오톡 채널</a></li><li><a href="https://www.facebook.com/churchlovenet" rel="noopener noreferrer">페이스북</a></li><li><a href="https://www.instagram.com/churchlovenet/" rel="noopener noreferrer">인스타그램</a></li></ul>
+      <ul class="footer-legal"><li><a href="/churchlove-demo/cinematic/privacy/">개인정보처리방침</a></li><li><a href="/churchlove-demo/cinematic/terms/">이용약관</a></li></ul>
+      <p class="footer-copy">Copyright © church-love.net · <span class="nobr">애니라인㈜.</span> All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+<button class="cine-top" type="button" hidden>맨 위로</button>
+
+<script src="/churchlove-demo/cinematic/assets/js/main.js" defer></script>
+<script src="/churchlove-demo/cinematic/assets/js/cinematic.js" defer></script>
+</body>
+</html>
